@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "2c31d5ae-4ee0-43fc-b7e0-c040ecebd768",
+		"name": "NASA Planets Exploration Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Habitable Planets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/planets"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all launches",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/launches"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Launch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"mission\": \"Testando\",\r\n        \"rocket\": \"Explorer IS1\",\r\n        \"launchDate\": \"February 20, 2024\",\r\n        \"target\": \"Keppler-442 b\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/launches"
+			},
+			"response": []
+		},
+		{
+			"name": "Abort mission",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/launches/teste"
+			},
+			"response": []
+		}
+	]
+}
