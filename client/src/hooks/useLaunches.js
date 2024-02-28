@@ -33,7 +33,6 @@ function useLaunches(onSuccessSound, onAbortSound, onFailureSound) {
       rocket,
       target,
     });
-
     // TODO: Set success based on response.
     const success = response.ok;
     if (success) {
