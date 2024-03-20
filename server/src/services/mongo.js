@@ -1,12 +1,9 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv")
-const dotenvExpand = require('dotenv-expand');
 
+dotenv.config();
 
-var envVariables = dotenv.config();
-dotenvExpand.expand(envVariables);
-
-MONGO_DB_URL = process.env.MONGO_DB_URL
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose.connection.on("connecting", () => {
     console.log('Trying to connect to MongoDB database')
@@ -20,7 +17,7 @@ mongoose.connection.on("error", (err) => {
 })
 
 async function mongoConnect(){
-    await mongoose.connect(MONGO_DB_URL);
+    await mongoose.connect(MONGO_URL);
 }
 
 async function mongoDisconnect(){
