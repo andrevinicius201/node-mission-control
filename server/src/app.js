@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors")
 const path = require("path")
 const morgan = require("morgan")
-const apiRouter = require("./routes/api.router");
+const apiRouter = require("./routes/api");
 
 app.use(cors({
     origin: 'http://localhost:3000',

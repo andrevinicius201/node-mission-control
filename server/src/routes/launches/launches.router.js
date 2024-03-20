@@ -1,6 +1,6 @@
 const express = require("express")
 
-const launchesController = require("../controllers/launches.controller")
+const launchesController = require("./launches.controller")
 
 const launchesRouter = express.Router()
 
